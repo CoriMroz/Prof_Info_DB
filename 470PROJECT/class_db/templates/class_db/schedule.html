@@ -1,0 +1,102 @@
+{% extends "class_db/layout.html" %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>470 Project</title>
+    <link rel="stylesheet" href= "{%static 'class_db/site.css'%}"/>
+</head>
+
+{% block content %}
+<body>
+    <div class="container">
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="home-content-wrapper">
+                    <h1>
+                        Schedule Information
+                    </h1>
+                    <form method="POST"> {% csrf_token %}
+                        <!--
+                            <div>
+                            <label for="tenure">Tenure Track</label>
+                            <select name="tenure" id="tenure">
+                                <option value="tenure">Tenure</option>
+                                <option value="tenure">1 year</option>
+                                <option value="tenure">2 years</option>
+                                <option value="tenure">3 years</option>
+                                <option value="tenure">4 years</option>
+                                <option value="tenure">5 years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="salary">Salary</label>
+                            <select name="salary" id="salary">
+                                <option value="salary">Salary</option>
+                                <option value="salary">$35,000-$40,000</option>
+                                <option value="salary">$45,000-$50,000</option>
+                                <option value="salary">$55,000-$60,000</option>
+                                <option value="salary">$65,000-$70,000</option>
+                                <option value="salary">$75,000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="schedule">Scheduling Preferences</label>
+                            <select name="schedule" id="schedule">
+                                <option value="Day">Day</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wendesday">Wendesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                            </select>
+                        -->
+                        <div>
+                            <label for="profType">Preference Type</label>
+                            <select name="ProfType">
+                                <option disabled='true' selected>-- Select Preference --</option>
+                                {% for results in ProfType%}
+                                <option>{{results.id}}.  {{results.type_name}}</option>
+                                {% endfor%}
+                                <!--
+                                <option value="Type 1">TT/T</option>
+                                <option value="Type 2">FTA</option>
+                                <option value="Type 3">PTA</option>
+                                <option value="Type 4">GTA</option>
+                                -->
+                            </select>
+
+                        </div>
+                        <div>
+
+                            <label for ="Start">Start Time</label>
+                            <input type="time" name="start" id="Start"><br/>
+                            <label for ="End">End Time</label>
+                            <input type="time" name="end" id="End">
+
+                        </div>
+
+                        <button type = "submit">Schedule Now</button>
+                        {% if messages%}
+                        {% for message in messages %}
+                        <h2 style="color: green;">{{message}}</h2>
+                        {%endfor%}
+                        {% endif %}
+                    </form>
+                        
+
+                    <p>Already have an account? Log in <a href= "{%url 'login' %}">here</a></p>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+{% endblock %}
+</html>

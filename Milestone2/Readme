@@ -1,0 +1,12 @@
+
+A rundown of the included files:
+
+1. ER Diagram - We used ERDPlus to create this diagram.  We feel confidant in it so far.  We also believe it matches up well with the Project Schema.
+
+2. Database Schema - This has been the basis of all our work so far and it hasn't changed since we began our work.  That is susceptible to change.
+
+3. Constraints - We do not have data for our database yet.  We have just been playing with small sets of dummy data.  Due to this fact, we have only vague constraints to date.
+
+4. Front End Design - Provided is a mockup of our UI and sitemap for our Project.
+
+5.  Relation Algebra Statements - Included are 5 fairly simple RA expressions.  We could not find a worthwhile online RA tool so we appologize for the hand written submission.

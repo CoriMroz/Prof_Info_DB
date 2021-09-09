@@ -1,0 +1,45 @@
+{% extends "class_db/layout.html" %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>470 Project</title>
+
+    <link rel="stylesheet" href= "{%static 'class_db/site.css'%}"/>
+</head>
+
+{% block content %}
+<body>
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="home-content-wrapper">
+                    <h1>
+                        Login
+                    </h1>
+                    <form action="" method="POST">
+                   <div>
+                       <label for ="email">Email</label>
+                       <input type= "email" name="email" id="email">
+                   </div>
+
+                    <div>
+                        <label for ="password">Password</label>
+                        <input type= "password" name="password" id="password">
+                    </div>
+                    <button type = "submit">Login</button>
+                    <p>Don't have an account? Join <a href= "{%url 'register' %}">here</a></p>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+{% endblock %}
+
+</html>
+

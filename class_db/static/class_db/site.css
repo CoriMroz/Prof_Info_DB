@@ -1,0 +1,133 @@
+body{
+        /*font-family: "lato", sans-serif;*/
+        margin: 0px;
+    }
+    
+    .container{
+        height: 100vh;
+    
+        position: relative;
+        animation: change 10s ease-in-out infinite;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 38px;
+        position: fixed; 
+        top:0;
+        height:100px;
+        width: 100%;
+        box-shadow: 0 0 30px rgba(27, 163, 184, 0.842);
+        background: linear-gradient(45deg, #23A6D5, #23D5AB);
+        background-size: 100% 100%;
+    
+       
+        
+    }
+    
+    .navbar > .left-side > div{
+        font-size: 1.8em;
+    }
+    
+    .right-side{
+        display:flex;
+    }
+    
+    .navbar > .right-side > div {
+        margin-right: 20px; 
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    
+    .navbar-item {
+        height: 22px;
+        border-bottom: 1px solid transparent;
+    }
+    
+    .navbar-item a {
+        color: black;
+        text-decoration: none;
+        border-bottom: white;
+    }
+    
+    
+    .navbar-item:hover {
+        border-bottom: 1px solid white;
+        transition: border-bottom 0.5s
+    }
+    
+    .navbar-item a:hover {
+        color: white;
+        transition: color 0.5s;
+    }
+    
+    .active-nav-link{
+        border-bottom: 1px solid white;
+    }
+    
+    .active-nav-link a{
+        color: white !important;
+    }
+    
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .home-image-wrapper img{
+        width: 100%;
+    }
+    
+    .home-content-wrapper{
+        text-align: center;
+        margin:auto;
+        width:100%;
+       
+    }
+    
+    .home-content-wrapper h1{
+        color: black;
+        text-transform: uppercase;
+    
+    }
+    
+    .home-content-wrapper p{
+        text-decoration: none;
+        color: black;
+        
+    }
+    
+    .home-content-wrapper a {
+        color: black;
+        text-decoration: none;
+        
+    }
+    
+    .home-content-wrapper a:hover {
+        color: rgb(42, 190, 201);
+        transition: color 0.5s;
+    }
+    
+    *{
+        margin: 0; 
+        padding:0;
+        box-sizing: border-box;
+    }
+    
+    button{
+        border: 10px solid transparent;
+        border-radius: 15px;
+        color: white;
+        background-color: rgb(42, 190, 201);
+    }
+    
+    button:hover{
+        cursor: pointer;
+        background-color: rgb(65, 225, 231);
+        transition: background-color 0.5s;
+    }

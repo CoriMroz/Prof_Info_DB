@@ -1,0 +1,163 @@
+{% extends "class_db/layout.html" %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>470 Project</title>
+    <link rel="stylesheet" href= "{%static 'class_db/site.css'%}"/>
+</head>
+
+{% block content %}
+<body>
+    <div class="container">
+
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="home-content-wrapper">
+                    <h1>
+                        Please input your information for Scheduling
+                    </h1>
+                    <form method="POST">{% csrf_token %}
+                    <label for ="name">Name</label><br/>
+                    <input type= "text" name="fname" id="name" placeholder="First"><br/>
+                    <input type= "text" name="lname" id="name" placeholder="Last" required><br/>
+                   <!--
+                    <div>
+                    <label for ="email">Email</label>
+                    <input type= "email" name="email" id="email">
+                    <div>
+                        <label for ="DOB">Date of birth</label>
+                        <select name="DOB" id="DOB">
+                            <option value="Month">Month</option>
+                            <option value="Month">01</option>
+                            <option value="Month">02</option>
+                            <option value="Month">03</option>
+                            <option value="Month">04</option>
+                            <option value="Month">05</option>
+                            <option value="Month">06</option>
+                            <option value="Month">07</option>
+                            <option value="Month">08</option>
+                            <option value="Month">09</option>
+                            <option value="Month">10</option>
+                            <option value="Month">11</option>
+                            <option value="Month">12</option>
+                        </select>
+                        <select name="DOB" id="DOB">
+                            <option value="Day">Day</option>
+                            <option value="Day">01</option>
+                            <option value="Day">02</option>
+                            <option value="Day">03</option>
+                            <option value="Day">04</option>
+                            <option value="Day">05</option>
+                            <option value="Day">06</option>
+                            <option value="Day">07</option>
+                            <option value="Day">08</option>
+                            <option value="Day">09</option>
+                            <option value="Day">10</option>
+                            <option value="Day">11</option>
+                            <option value="Day">12</option>
+                            <option value="Day">13</option>
+                            <option value="Day">14</option>
+                            <option value="Day">15</option>
+                            <option value="Day">16</option>
+                            <option value="Day">17</option>
+                            <option value="Day">18</option>
+                            <option value="Day">19</option>
+                            <option value="Day">20</option>
+                            <option value="Day">21</option>
+                            <option value="Day">22</option>
+                            <option value="Day">23</option>
+                            <option value="Day">24</option>
+                            <option value="Day">25</option>
+                            <option value="Day">26</option>
+                            <option value="Day">27</option>
+                            <option value="Day">28</option>
+                            <option value="Day">29</option>
+                            <option value="Day">30</option>
+                            <option value="Day">31</option>
+                        </select>
+                        <select name="DOB" id="DOB">
+                            <option value="year">Year</option>
+                            <option value="year">1970</option>
+                            <option value="year">1971</option>
+                            <option value="year">1972</option>
+                            <option value="year">1973</option>
+                            <option value="year">1974</option>
+                            <option value="year">1975</option>
+                            <option value="year">1976</option>
+                            <option value="year">1977</option>
+                            <option value="year">1978</option>
+                            <option value="year">1979</option>
+                            <option value="year">1980</option>
+                            <option value="year">1981</option>
+                            <option value="year">1982</option>
+                            <option value="year">1983</option>
+                            <option value="year">1984</option>
+                            <option value="year">1985</option>
+                            <option value="year">1986</option>
+                            <option value="year">1987</option>
+                            <option value="year">1988</option>
+                            <option value="year">1989</option>
+                            <option value="year">1990</option>
+                            <option value="year">1991</option>
+                            <option value="year">1992</option>
+                            <option value="year">1993</option>
+                            <option value="year">1994</option>
+                            <option value="year">1995</option>
+                            <option value="year">1996</option>
+                            <option value="year">1997</option>
+                            <option value="year">1998</option>
+                            <option value="year">1999</option>
+                            <option value="year">2000</option>
+                        </select>
+                    </div>
+                    <div>
+                   -->
+                   
+                    <!--<label for ="sex">Sex</label>
+                        <select name="sex" id="sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    -->
+                    <div>
+                        <label for ="id">ID Number</label><br>
+                        <input type= "text" name="internal_id" id="id" placeholder="(ex. 124467)">
+                    </div>
+                    <!--
+                    <div>
+                        <label for ="username">Username</label>
+                        <input type= "text" name="username" id="username">
+                    </div>
+                    <div>
+                        <label for ="password">Password</label>
+                        <input type= "password" name="password" id="password">
+                    </div>
+                    -->
+                    
+                    <button type = "submit">Save</button>
+                    {% if messages%}
+                    {% for message in messages %}
+                        <h2 style="color: blue;">{{message}}</h2>
+                    {%endfor%}
+                    {% endif %}
+                    </form>
+
+                    <p>Already have an account? Log in <a href= "{%url 'login' %}">here</a></p>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    {% endblock %}
+</html>
+

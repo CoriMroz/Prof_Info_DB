@@ -1,0 +1,63 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>470 Project</title>
+
+    <link rel="stylesheet" href= "{%static 'class_db/site.css'%}"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="left-side">
+                <div class="brand">
+                    <div>470 Project</div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="navbar-item active-nav-link">
+                    <a href="{% url 'scheduling:home' %}">Home</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="{% url 'scheduling:about'}">About</a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="{%url 'scheduling:schedule' %}">Schedule</a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="{%url 'scheduling:login' %}">Login</a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="{%url 'scheduling:signup' %}">Signup</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="home-content-wrapper">
+                    <h1   style="font-size: 2vw;">Pick the schedule that 
+                        is right for you</h1>
+                    <form action="{%url 'scheduling:schedule' %}" method="GET">
+                    <button>SCHEDULE NOW </button>
+                    
+                    <p style="font-size: 2vw;">Don't have an account? Sign up <a href= "{%url 'scheduling:signup' %}">here</a></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+</html>
